@@ -57,6 +57,8 @@ rm -rf $dir/templates_c/*
 echo "Refresh RIGHTS"
 chmod -R 777 $dir/cache
 chmod -R 777 $dir/templates_c
+chmod -R 777 $dir/templates/Honeygrid/styles/custom
+chmod -R 777 $dir/templates/Honeygrid/assets/images/custom
 chmod -R 444 $dir/admin/includes/configure.php
 chmod -R 444 $dir/admin/includes/configure.org.php
 chmod -R 444 $dir/includes/configure.php
