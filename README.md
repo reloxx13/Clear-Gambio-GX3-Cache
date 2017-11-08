@@ -7,6 +7,7 @@ Usage:
 Checkout clearCache.sh in your_gambio_root/bin
 
 ./bin/clearCache.sh
+It deletes always Template Cache and renew Rights
 
 Possible Params:
 --css
