@@ -1,5 +1,5 @@
-# BASH-Clear-Gambio-Cache
-Script to clean Gambio cache on mac/unix
+# BASH-Clear-Gambio-3-Cache
+Script to clean Gambio 3 cache on mac/unix
 
 (Renew file rights for Gambio, too)
 
