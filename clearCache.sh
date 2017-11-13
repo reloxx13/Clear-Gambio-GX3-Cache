@@ -12,15 +12,17 @@ while [ "$1" != '' ]
     shift #unknown
 done
 
-
-
 dir=$(cd -P -- "$(dirname -- "$0")/.." && pwd -P)
 
-echo "Clear View Cache"
+echo "Clear Regular Cache"
 
 rm -rf $dir/cache/*.php
 rm -rf $dir/cache/*.pdc
 rm -rf $dir/cache/execute_post_installation_admin_extenders
+rm -rf $dir/cache/hub_*
+rm -rf $dir/cache/banner_infobox--*.png
+
+
 
 
 
@@ -48,7 +50,6 @@ if [ "$LOGS" == "yes" ]
         rm -f $dir/logfiles/errors-*.log
 fi
 
-
 echo "Clear TEMPLATE Cache"
 
 rm -rf $dir/templates_c/*
@@ -57,12 +58,13 @@ rm -rf $dir/templates_c/*
 echo "Refresh RIGHTS"
 chmod -R 777 $dir/cache
 chmod -R 777 $dir/templates_c
-chmod -R 777 $dir/templates/Honeygrid/styles/custom
-chmod -R 777 $dir/templates/Honeygrid/assets/images/custom
+chmod -R 777 $dir/templates
+chmod -R 777 $dir/StyleEdit3/templates
+chmod -R 777 $dir/images
+chmod -R 777 $dir/uploads
 chmod 444 $dir/admin/includes/configure.php
 chmod 444 $dir/admin/includes/configure.org.php
 chmod 444 $dir/includes/configure.php
 chmod 444 $dir/includes/configure.org.php
-
 
 echo "End clearing cache"
